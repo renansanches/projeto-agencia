@@ -10,8 +10,14 @@
     align-items: center;
 }
 
-#servico .row div{
+/* #servico .row div{
     height: 200px;
     background: green;
     color: #fff;
-}
+} */
+
+/* #about{
+    width: 49%;
+    height: 300px;
+    display: flex;
+} */
