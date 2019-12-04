@@ -1,3 +1,20 @@
+<?php
+
+$servicos = [
+    ["imagem"=>"images/criar-site.png", "titulo"=>"Criamos seu Site!", "descricao"=>"Iremos criar um site incrível pra você!"],
+    ["imagem"=>"images/criar-loja-virtual.jpg","titulo"=>"Criamos sua Loja Virtual!","descricao"=>"Venda online sem dor de cabeça!"],
+    ["imagem"=>"images/criar-blog.png","titulo"=>"Criamos seu Blog!","descricao"=>"Seja um blogueiro incrível!"],
+    ["imagem"=>"images/criar-site.png", "titulo"=>"Criamos seu Site!", "descricao"=>"Iremos criar um site incrível pra você!"],
+    ["imagem"=>"images/criar-loja-virtual.jpg","titulo"=>"Criamos sua Loja Virtual!","descricao"=>"Venda online sem dor de cabeça!"],
+    ["imagem"=>"images/criar-blog.png","titulo"=>"Criamos seu Blog!","descricao"=>"Seja um blogueiro incrível!"],
+    ["imagem"=>"images/criar-site.png", "titulo"=>"Criamos seu Site!", "descricao"=>"Iremos criar um site incrível pra você!"],
+    ["imagem"=>"images/criar-loja-virtual.jpg","titulo"=>"Criamos sua Loja Virtual!","descricao"=>"Venda online sem dor de cabeça!"],
+    ["imagem"=>"images/criar-blog.png","titulo"=>"Criamos seu Blog!","descricao"=>"Seja um blogueiro incrível!"]
+];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,17 +60,26 @@
     </section>
     <section id="servico" class="container mt-5">
         <div class="row">
+
+        <?php foreach($servicos as $servico){ ?>
+
             <div class="col-4">
                 <div class="card">
-                    <img src="images/criar-site.png" class="card-img-top" alt="...">
+                    <img src="<?php echo $servico["imagem"]; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Criamos seu Site!</h5>
-                      <p class="card-text">Iremos criar um site incrível pra você!</p>
+                      <h5 class="card-title">
+                          <?php echo $servico["titulo"]; ?>
+                      <p class="card-text">
+                          <?php echo $servico["descricao"]; ?>
                       <a href="#" class="btn btn-primary">Contrate Agora!</a>
                     </div>
                   </div>
             </div>
-            <div class="col-4">
+
+        <?php } ?>
+
+
+            <!-- <div class="col-4">
                 <div class="card">
                     <img src="images/criar-loja-virtual.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -72,7 +98,7 @@
                       <a href="#" class="btn btn-primary">Contrate Agora!</a>
                     </div>
                   </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
